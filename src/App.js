@@ -6,6 +6,12 @@ class App extends Component {
   state = {
     name: 'Alejandra'
   }
+  
+  changeState = () => {
+    this.setState({
+      name: 'Eulalia'
+    })
+  }
 
   click(e) {
     console.log(e.target);
@@ -20,6 +26,7 @@ class App extends Component {
             My name is {this.state.name}
           </p>
           <button onClick={this.click}>Click me</button>
+          <button onClick={this.changeState}>Change state</button>
           <a
             className="App-link"
             href="https://reactjs.org"
